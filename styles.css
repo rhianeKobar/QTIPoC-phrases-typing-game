@@ -1,0 +1,59 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    display: grid;
+    grid-template:1fr 1fr 1fr 1fr 4fr/ 1fr 2fr 1fr;
+    font-size: 2rem;
+    background-color: darkblue;
+    color: whitesmoke;
+}
+header{
+    margin-top: 20px;
+    grid-area: 1 / 2 / span 1 / span 1;
+    justify-self: center;
+}
+#gameButtons{
+    margin-top: 40px;
+    grid-area: 2 / 2 / span 1 / span 1;
+    height:100%;
+    justify-self: center;
+} 
+#nextWord{
+    background-color: forestgreen;
+    border-radius: 10px;
+    min-width: 10rem;
+    min-height: 4rem;
+}
+#resetGame{
+    background-color: orange;
+    border-radius: 10px;
+    min-width: 10rem;
+    min-height: 4rem;
+}
+#gameStats{
+    grid-area: 3 / 2 / span 1 / span 1;
+    justify-self: center;
+    align-self: center;
+}
+#currentPhrase{
+    grid-area: 4 / 2 / span 1 / span 1;
+    align-self: center;
+    text-decoration: underline;
+    color: mintcream;
+}
+#currentStats{
+    display: none;
+    grid-area: 5 / 2 / span 1 / span 1;
+    justify-self: center;
+}    
+#typing{
+    grid-area: 5 / 2 / span 1 / span 1;
+}
+.focus{
+    background-color: orchid;
+}
+.done{
+    color: lightslategray;
+}
