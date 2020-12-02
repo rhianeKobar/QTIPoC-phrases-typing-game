@@ -16,28 +16,63 @@ let paragraphs =
         definition:'Womanism is a social theory based on the history and everyday'// experiences of women of color, especially black women. It seeks, according to womanist scholar Layli Maparyan (Phillips), to "restore the balance between people and the environment/nature and reconcile human life with the spiritual dimension". Writer Alice Walker coined the term "womanist" in a short story, "Coming Apart", in 1979.'
     }
 ];
-//Get random paragraph from array
+//Get random object containing phrase with definition from array
+let getPhrase = (array) =>{
+    let para = array[parseInt(Math.random()*array.length)];
+    return para;
+}
+//save chosen paragraph to variable
+let phraseObj;
+//set text that player will type
+let gameText;
 
-let phraseObj = paragraphs[parseInt(Math.random()*paragraphs.length)];
-let gameText = phraseObj.definition;
-
-//split paragraph into individual letters, map it to a new arrary and give each memeber of the new array a span element
-
-//maybe I need to make this a function
-let characters = gameText.split('').map(char =>{
-        let span = document.createElement('span');
-        span.innerText = char;
-        typingText.appendChild(span);
-        return span;
-});
-
+let characters = [];
 // retrieving and storing paragraph array's object and their properties;
 //changing the title to the word you'll learn the definition of
-let gamePhrase = phraseObj.phrase;
-document.getElementById('currentPhrase').innerText = gamePhrase;
-let focusIndex =  0;
-let focusChar = characters[focusIndex];
-focusChar.classList.add('focus');
+let gamePhrase;
+let currentPhrase = document.getElementById('currentPhrase');
+let focusIndex;
+let focusChar;
+
+//remove typed definition from array and replace it with a new one
+function nextPhrase() {
+    if (paragraphs.length === 0) {
+        typingText.innerHTML = "Congratulations, you've completed the game!"
+    } else {
+        phraseObj = getPhrase(paragraphs);
+        gameText = phraseObj.definition;
+        //split paragraph into individual letters, map it to a new arrary and give each member of the new array a span element
+        if(characters.length === 0){
+            characters = gameText.split('').map(char => {
+                let span = document.createElement('span');
+                span.innerText = char;
+                typingText.appendChild(span);
+                return span;
+            });
+        }else{
+            let oldText = typingText.querySelectorAll(".done");
+            oldText.forEach(letter =>{
+                letter.remove();
+            })
+            characters = /* character = an array of letters of the gameText*/ gameText.split('').map(char => {
+            let span = document.createElement('span');
+            span.innerText = char;
+            typingText.appendChild(span);
+            return span;
+            });
+        }
+        gamePhrase = phraseObj.phrase;
+        currentPhrase.style.display = 'none';
+        currentPhrase.innerText = gamePhrase;
+        currentPhrase.style.display = 'block';
+        focusIndex = 0;
+        focusChar = characters[focusIndex];
+        focusChar.classList.add('focus');
+        typingText.style.display = 'block';
+    }
+}
+
+nextPhrase();
 
 //setting up timer
 let startTime = null;
@@ -90,24 +125,19 @@ function calcAvgSpeed(wpm) {
         for (let i = 0; i < speedArray.length; i++) {
             speedTotal += speedArray[i];
         }
-        return speedTotal;
+        let avgSpeed = speedTotal / speedArray.length;
+        return speed.innerText = 'Average typing speed: ' + avgSpeed;
+    }else{
+        return speed.innerText = 'Average typing speed: ' + speedArray[0];
     }
-    let avgSpeed = speedTotal / speedArray.length;
-    speed.innerText = 'Average typing speed: ' + avgSpeed;
-    return avgSpeed;    
+        
 }
 //increment and display phrase counter
 function countPhrases() {
     phraseCounter++;
     counter.innerText = 'Phrases learned: ' + phraseCounter;
 }
-//remove typed definition from array and replace it with a new one
-function nextPhrase() {
-    paragraphs.pop(phraseObj);
-    gameText = phraseObj.phrase;
-    console.log(gameText);
-    return gameText;
-}
+
 // clear current wpm
 function clearing(){
     setTimeout(clearStats(),5000);
@@ -115,7 +145,7 @@ function clearing(){
 function clearStats(){
     typingText.style.display = 'block';
     stats.style.display = 'none';
-    console.log("stop thinking about Aoife")
+    console.log("You gots this, I know you'll figure this out or ask for help if you can't :*")
 }
 
 function game({ key }) {
@@ -140,7 +170,7 @@ function game({ key }) {
             let wpm = wordsPM(minutes);
 
             //display wpm
-            displayStats(wpm);
+            //displayStats(wpm);
 
             //increment phrase counter and display
             countPhrases();
@@ -151,16 +181,21 @@ function game({ key }) {
             //reset timers
             resetTimes();
 
+            paragraphs.pop(phraseObj);
+
             //sets next phrase
             nextPhrase();
             
             //clear the currently displayed wpm and display the next phrase
-            clearing();
+            //clearing();
         } else {
             focusChar.classList.add('focus');
         }
 
     }
+}
+function resetGame(){
+
 }
 
 //event Listeners
