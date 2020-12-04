@@ -3,7 +3,7 @@ export let paragraphs =
 [
     {
         phrase:'Heteronormative',
-        definition:'Heteronormative refers to the assumption that all human beings are either male or female in both sex and gender, and that sexual and/or romantic attraction and activity only occurs, or is only normal, between heterosexual cis men and heterosexual cis women.'
+        definition:'Heteronormative refers to the assumption that all human beings are either male or female in both sex and gender, and that sexual and-or romantic attraction and activity only occurs, or is only normal, between heterosexual cis men and heterosexual cis women.'
     },
     {
         phrase: 'Triple Oppression',
@@ -11,7 +11,7 @@ export let paragraphs =
     },
     {
         phrase: 'Womanism',
-        definition:'Womanism is a social theory based on the history and everyday experiences of women of color, especially black women. It seeks, according to womanist scholar Layli Maparyan (Phillips), to "restore the balance between people and the environment/nature and reconcile human life with the spiritual dimension". Writer Alice Walker coined the term "womanist" in a short story, "Coming Apart", in 1979.'
+        definition:'Womanism is a social theory based on the history and everyday experiences of women of color, especially black women'
     },
     {
         phrase:'Ableism',
@@ -19,7 +19,7 @@ export let paragraphs =
     },
     {
         phrase:'Ageism',
-        definition:'Casual and/or systematic stereotyping and discrimination against individuals or groups on the basis of their age'
+        definition:'Casual and-or systematic stereotyping and discrimination against individuals or groups on the basis of their age'
     },
     {
         phrase:'BAME',
@@ -27,7 +27,7 @@ export let paragraphs =
     },
     {
         phrase:'Bisexual',
-        definition:'Although originally conceptualised as a term to describe those who experience romantic and/or sexual attraction towards men and women, the term has been redefined to describe one who is attracted to both their own gender as well as other genders, or to gender identities similar to their own and different from their own'
+        definition:'Although originally conceptualised as a term to describe those who experience romantic and-or sexual attraction towards men and women, the term has been redefined to describe one who is attracted to both their own gender as well as other genders, or to gender identities similar to their own and different from their own'
     },
     {
         phrase:'Biphobia',
@@ -47,6 +47,6 @@ export let paragraphs =
     },
     {
         phrase:'Colourism',
-        definition:'The assumption that all human beings are cisgender, i.e. have a gender identity which matches the sex they were assigned at birth'
+        definition:'Prejudice or discrimination against individuals with a darker skin tone. It typically occurs among people of the same ethnic or racial group'
     }
 ];

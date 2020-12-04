@@ -10,14 +10,6 @@ body{
     background-color: plum;
     color: whitesmoke;
 }
-#side1{
-    grid-area: 1 / 1 / span 5 / span 1;
-    background-color: darkcyan;
-}
-#side2{
-    grid-area: 1 / 4 / span 5 / span 1;
-    background-color: darkcyan;
-}
 header{
     margin-top: 20px;
     grid-area: 1 / 2 / span 1 / span 1;

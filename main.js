@@ -3,11 +3,9 @@ import {paragraphs} from './paragraphs.js';
 let typingText = document.getElementById("typing");
 
 //Get random object containing phrase with definition from array
-let getRand;
 
 let getPhrase = (array) =>{
-    getRand = parseInt(Math.random()*paragraphs.length)
-    let para = array[getRand];
+    let para = array[Math.floor(Math.random()*array.length)];
     return para;
 }
 //save chosen paragraph to variable
@@ -29,6 +27,7 @@ function nextPhrase() {
         typingText.innerHTML = "Congratulations, you've completed the game!"
     } else {
         phraseObj = getPhrase(paragraphs);
+        console.log(paragraphs)
         gameText = phraseObj.definition;
         //split paragraph into individual letters, map it to a new arrary and give each member of the new array a span element
         if(characters.length === 0){
@@ -116,9 +115,9 @@ function calcAvgSpeed(wpm) {
             return a + b;
         })
         let avgSpeed = Math.floor(speedTotal/(speedArray.length));
-        return speed.innerText = 'Average typing speed: ' + avgSpeed + 'words per minute';
+        return speed.innerText = 'Average typing speed: ' + avgSpeed + ' words per minute';
     }else{
-        return speed.innerText = 'Your typing speed: ' + speedArray[0] + 'words per minute';
+        return speed.innerText = 'Your typing speed: ' + speedArray[0] + ' words per minute';
     }
 }
 //increment and display phrase counter
@@ -160,7 +159,7 @@ function game({ key }) {
             //reset timers
             resetTimes();
 
-            paragraphs.pop(getRand)
+            paragraphs.pop(phraseObj)
 
             //sets next phrase
             nextPhrase();
