@@ -44,7 +44,6 @@ function nextPhrase() {
     if (paragraphs.length === 0) {
         typingText.innerHTML = "Congratulations, you've completed the game!"
     } else {
-        console.log(getRand) 
         phraseObj = getPhrase(paragraphs);
         gameText = phraseObj.definition;
         //split paragraph into individual letters, map it to a new arrary and give each member of the new array a span element
@@ -128,7 +127,6 @@ function displayStats(wpm){
 //calculate and display average wpm
 function calcAvgSpeed(wpm) {
     speedArray.push(wpm);
-    console.log(speedArray);
     if (speedArray.length > 1) {
         let speedTotal  = speedArray.reduce((a, b)=>{
             return a + b;
@@ -178,7 +176,6 @@ function game({ key }) {
             //reset timers
             resetTimes();
 
-            console.log(getRand) 
             paragraphs.pop(getRand)
 
             //sets next phrase
