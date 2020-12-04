@@ -1,24 +1,8 @@
+import {paragraphs} from './paragraphs.js';
+
 let typingText = document.getElementById("typing");
 
-//create array objects
-let paragraphs =
-[
-    {
-        phrase:'Heteronormative',
-        definition:'Heteronormative refers to the assumption that all human beings'// are either male or female in both sex and gender, and that sexual and/or romantic attraction and activity only occurs, or is only normal, between heterosexual cis men and heterosexual cis women.',
-    },
-    {
-        phrase: 'Triple Oppression',
-        definition: 'Triple oppression is a theory developed by black socialists'// in the United States, such as Claudia Jones. The theory states that a connection exists between various types of oppression, specifically classism, racism, and sexism. It hypothesizes that all three types of oppression need to be overcome at once. It is also referred to as "double jeopardy", Jane Crow, or triple exploitation. ',
-    },
-    {
-        phrase: 'Womanism',
-        definition:'Womanism is a social theory based on the history and everyday'// experiences of women of color, especially black women. It seeks, according to womanist scholar Layli Maparyan (Phillips), to "restore the balance between people and the environment/nature and reconcile human life with the spiritual dimension". Writer Alice Walker coined the term "womanist" in a short story, "Coming Apart", in 1979.'
-    }
-];
-
 //Get random object containing phrase with definition from array
-
 let getRand;
 
 let getPhrase = (array) =>{
@@ -119,11 +103,11 @@ function wordsPM(totalTime){
     return wpm;
 }
 //displaying wpm
-function displayStats(wpm){
+/*function displayStats(wpm){
     stats.innerText = 'Typing Speed: ' + wpm + ' words per minute ';
     typingText.style.display = 'none';
     stats.style.display = 'inherit';
-}
+}*/
 //calculate and display average wpm
 function calcAvgSpeed(wpm) {
     speedArray.push(wpm);
@@ -132,9 +116,9 @@ function calcAvgSpeed(wpm) {
             return a + b;
         })
         let avgSpeed = Math.floor(speedTotal/(speedArray.length));
-        return speed.innerText = 'Average typing speed: ' + avgSpeed;
+        return speed.innerText = 'Average typing speed: ' + avgSpeed + 'words per minute';
     }else{
-        return speed.innerText = 'Your typing speed: ' + speedArray[0];
+        return speed.innerText = 'Your typing speed: ' + speedArray[0] + 'words per minute';
     }
 }
 //increment and display phrase counter
