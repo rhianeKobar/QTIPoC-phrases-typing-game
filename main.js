@@ -19,7 +19,7 @@ let paragraphs =
 
 //Get random object containing phrase with definition from array
 
-const getRand = parseInt(Math.random()*paragraphs.length)
+let getRand = parseInt(Math.random()*paragraphs.length)
 
 let getPhrase = (array) =>{
     let para = array[getRand];
