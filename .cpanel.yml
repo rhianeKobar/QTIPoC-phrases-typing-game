@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/kunta/Documents/Projects/quick-typer/
+    - export DEPLOYPATH=/home/nowitwor/public_html
     - /QTIPoc-phrases-typing-game -R $DEPLOYPATH
