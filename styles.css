@@ -6,6 +6,7 @@ body{
     display: grid;
     grid-template:1fr 1fr 1fr 1fr 2fr/ 1fr 2fr 1fr;
     font-size: 2rem;
+    font-family: sans-serif;
     background-color: plum;
     color: whitesmoke;
 }

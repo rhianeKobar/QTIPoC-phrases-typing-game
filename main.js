@@ -16,9 +16,13 @@ let paragraphs =
         definition:'Womanism is a social theory based on the history and everyday'// experiences of women of color, especially black women. It seeks, according to womanist scholar Layli Maparyan (Phillips), to "restore the balance between people and the environment/nature and reconcile human life with the spiritual dimension". Writer Alice Walker coined the term "womanist" in a short story, "Coming Apart", in 1979.'
     }
 ];
+
 //Get random object containing phrase with definition from array
+
+let getRand;
+
 let getPhrase = (array) =>{
-    let para = array[parseInt(Math.random()*array.length)];
+    let para = array[getRand];
     return para;
 }
 //save chosen paragraph to variable
@@ -39,6 +43,7 @@ function nextPhrase() {
     if (paragraphs.length === 0) {
         typingText.innerHTML = "Congratulations, you've completed the game!"
     } else {
+        getRand = parseInt(Math.random()*paragraphs.length) 
         phraseObj = getPhrase(paragraphs);
         gameText = phraseObj.definition;
         //split paragraph into individual letters, map it to a new arrary and give each member of the new array a span element
@@ -50,7 +55,7 @@ function nextPhrase() {
                 return span;
             });
         }else{
-            let oldText = typingText.querySelectorAll(".done");
+            let oldText = typingText.querySelectorAll('.done');
             oldText.forEach(letter =>{
                 letter.remove();
             })
@@ -65,6 +70,8 @@ function nextPhrase() {
         currentPhrase.style.display = 'none';
         currentPhrase.innerText = gamePhrase;
         currentPhrase.style.display = 'block';
+        
+        //Set highlighted element
         focusIndex = 0;
         focusChar = characters[focusIndex];
         focusChar.classList.add('focus');
@@ -82,8 +89,7 @@ let wpm;
 let stats = document.getElementById('currentStats');
 
 //game stats variables
-let phraseCounter = 0;let nextBtn = document.getElementById('nextWord')
-let resetBtn = document.getElementById('resetGame')
+let phraseCounter = 0;
 let counter = document.getElementById('counter');
 let speed = document.getElementById('speed');
 let speedTotal = 0;
@@ -121,31 +127,21 @@ function displayStats(wpm){
 //calculate and display average wpm
 function calcAvgSpeed(wpm) {
     speedArray.push(wpm);
+    console.log(speedArray);
     if (speedArray.length > 1) {
-        for (let i = 0; i < speedArray.length; i++) {
-            speedTotal += speedArray[i];
-        }
-        let avgSpeed = speedTotal / speedArray.length;
+        let speedTotal  = speedArray.reduce((a, b)=>{
+            return a + b;
+        })
+        let avgSpeed = Math.floor(speedTotal/(speedArray.length));
         return speed.innerText = 'Average typing speed: ' + avgSpeed;
     }else{
-        return speed.innerText = 'Average typing speed: ' + speedArray[0];
+        return speed.innerText = 'Your typing speed: ' + speedArray[0];
     }
-        
 }
 //increment and display phrase counter
 function countPhrases() {
     phraseCounter++;
     counter.innerText = 'Phrases learned: ' + phraseCounter;
-}
-
-// clear current wpm
-function clearing(){
-    setTimeout(clearStats(),5000);
-}
-function clearStats(){
-    typingText.style.display = 'block';
-    stats.style.display = 'none';
-    console.log("You gots this, I know you'll figure this out or ask for help if you can't :*")
 }
 
 function game({ key }) {
@@ -181,7 +177,7 @@ function game({ key }) {
             //reset timers
             resetTimes();
 
-            paragraphs.pop(phraseObj);
+            paragraphs.pop(getRand)
 
             //sets next phrase
             nextPhrase();
@@ -194,12 +190,12 @@ function game({ key }) {
 
     }
 }
+let resetBtn = document.getElementById('resetGame')
 function resetGame(){
-
+    
 }
 
 //event Listeners
 document.addEventListener('keydown',game);
 
-    
     
