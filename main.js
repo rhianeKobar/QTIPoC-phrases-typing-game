@@ -19,7 +19,7 @@ let paragraphs =
 
 //Get random object containing phrase with definition from array
 
-let getRand;
+const getRand = parseInt(Math.random()*paragraphs.length)
 
 let getPhrase = (array) =>{
     let para = array[getRand];
@@ -43,7 +43,7 @@ function nextPhrase() {
     if (paragraphs.length === 0) {
         typingText.innerHTML = "Congratulations, you've completed the game!"
     } else {
-        getRand = parseInt(Math.random()*paragraphs.length) 
+        console.log(getRand) 
         phraseObj = getPhrase(paragraphs);
         gameText = phraseObj.definition;
         //split paragraph into individual letters, map it to a new arrary and give each member of the new array a span element
@@ -177,6 +177,7 @@ function game({ key }) {
             //reset timers
             resetTimes();
 
+            console.log(getRand) 
             paragraphs.pop(getRand)
 
             //sets next phrase
@@ -192,10 +193,11 @@ function game({ key }) {
 }
 let resetBtn = document.getElementById('resetGame')
 function resetGame(){
-    
+    window.location.reload();
 }
 
 //event Listeners
+resetBtn.addEventListener('click',resetGame)
 document.addEventListener('keydown',game);
 
     
