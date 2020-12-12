@@ -27,7 +27,6 @@ function nextPhrase() {
         typingText.innerHTML = "Congratulations, you've completed the game!"
     } else {
         phraseObj = getPhrase(paragraphs);
-        console.log(paragraphs)
         gameText = phraseObj.definition;
         //split paragraph into individual letters, map it to a new arrary and give each member of the new array a span element
         if(characters.length === 0){
@@ -125,6 +124,13 @@ function countPhrases() {
     phraseCounter++;
     counter.innerText = 'Phrases learned: ' + phraseCounter;
 }
+function removeElement(element, array) {
+    
+    let index = array.indexOf(element);
+    if (index > -1) {
+        array.splice(index, 1);
+    }
+}
 
 function game({ key }) {
     //starting timer
@@ -159,8 +165,7 @@ function game({ key }) {
             //reset timers
             resetTimes();
 
-            paragraphs.pop(phraseObj)
-
+            removeElement(phraseObj, paragraphs)
             //sets next phrase
             nextPhrase();
             
