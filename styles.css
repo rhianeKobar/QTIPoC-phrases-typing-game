@@ -23,8 +23,9 @@ header{
 #resetGame{
     background-color: orange;
     border-radius: 10px;
+    border-color: #464646;
     min-width: 10rem;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     min-height: 4rem;
 }
 #gameStats{
@@ -57,4 +58,5 @@ header{
 #credits{
     grid-area: 2 / 3 / span 1 / span 1;
     justify-self: start;
+    font-size: 1.5rem;
 }
