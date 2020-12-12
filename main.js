@@ -125,11 +125,12 @@ function countPhrases() {
     counter.innerText = 'Phrases learned: ' + phraseCounter;
 }
 function removeElement(element, array) {
-    
+
     let index = array.indexOf(element);
     if (index > -1) {
         array.splice(index, 1);
     }
+    return array;
 }
 
 function game({ key }) {
@@ -166,6 +167,7 @@ function game({ key }) {
             resetTimes();
 
             removeElement(phraseObj, paragraphs)
+
             //sets next phrase
             nextPhrase();
             
