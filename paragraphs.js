@@ -11,7 +11,7 @@ export let paragraphs =
     },
     {
         phrase:'Androgynous',
-        definition:'1. A gender expression that has elements of both masculinity and femininity; 2. Occasionally used in place of “intersex”'
+        definition:'1. A gender expression that has elements of both masculinity and femininity; 2. Occasionally used in place of !intersex!'
     },
     {
         phrase:'BAME',
