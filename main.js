@@ -117,10 +117,10 @@ function calcAvgSpeed(wpm) {
             return a + b;
         })
         let avgSpeed = Math.floor(speedTotal/(speedArray.length));
-        return {
-            speed.innerText = 'Your Average typing speed: ' + avgSpeed + ' words per minute',
-            tSpeed.innerText = 'Your typing speed: ' + speedArray[(speedArray.length -1)] + ' words per minute'
-        }
+        speed.innerText = 'Your Average typing speed: ' + avgSpeed + ' words per minute',
+        tSpeed.innerText = 'Your typing speed: ' + speedArray[(speedArray.length -1)] + ' words per minute'
+        return avgSpeed;
+
     }else{
         return tSpeed.innerText = 'Your typing speed: ' + speedArray[(speedArray.length -1)] + ' words per minute';
     }
