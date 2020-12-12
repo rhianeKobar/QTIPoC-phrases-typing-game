@@ -75,6 +75,7 @@ let stats = document.getElementById('currentStats');
 let phraseCounter = 0;
 let counter = document.getElementById('counter');
 let speed = document.getElementById('speed');
+let tSpeed = document.getElementById('tSpeed');
 let gameStats = document.getElementById('gameStats');
 let speedTotal = 0;
 
@@ -116,9 +117,12 @@ function calcAvgSpeed(wpm) {
             return a + b;
         })
         let avgSpeed = Math.floor(speedTotal/(speedArray.length));
-        return speed.innerText = 'Average typing speed: ' + avgSpeed + ' words per minute';
+        return {
+            speed.innerText = 'Your Average typing speed: ' + avgSpeed + ' words per minute',
+            tSpeed.innerText = 'Your typing speed: ' + speedArray[(speedArray.length -1)] + ' words per minute';
+        }
     }else{
-        return speed.innerText = 'Your typing speed: ' + speedArray[0] + ' words per minute';
+        return tSpeed.innerText = 'Your typing speed: ' + speedArray[(speedArray.length -1)] + ' words per minute';
     }
 }
 //increment and display phrase counter
