@@ -31,10 +31,11 @@ header{
     top: 50%;
 }
 #gameStats{
-    grid-area: 3 / 2 / span 1 / span 1;
+    grid-area: 3 / 1 / span 1 / span 3;
     justify-self: center;
     align-self: center;
     display: none;
+    text-align: center;
 }
 #currentPhrase{
     grid-area: 4 / 2 / span 1 / span 1;
