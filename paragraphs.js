@@ -39,7 +39,7 @@ export let paragraphs =
     },
     {
         phrase:'Butch ',
-        definition:'An identity or presentation of non-heteronormative, reclaimed, queer masculinity. Although commonly associated with masculine-presenting queer women, it’s used by many to describe a distinct gender identity and!or expression, and does not necessarily imply that one also identifies as a woman.'
+        definition:'An identity or presentation of non-heteronormative, reclaimed, queer masculinity. Although commonly associated with masculine-presenting queer women, it!s used by many to describe a distinct gender identity and!or expression, and does not necessarily imply that one also identifies as a woman.'
     },
     {
         phrase:'Cis',
@@ -59,7 +59,7 @@ export let paragraphs =
     },
     {
         phrase:'Disabled',
-        definition:'A person with a cognitive, developmental, intellectual, mental, physical and!or sensory impairment, that can in some cases substantially affect their life activities. A disability may be present from birth or occur during a person’s lifetime'
+        definition:'A person with a cognitive, developmental, intellectual, mental, physical and!or sensory impairment, that can in some cases substantially affect their life activities. A disability may be present from birth or occur during a person!s lifetime'
     },
     {
         phrase:'Drag (drag king or drag queen)',
@@ -79,7 +79,7 @@ export let paragraphs =
     },
     {
         phrase:'Feminine-of-centre',
-        definition:'Indicates a range of terms of gender identity and gender presentation for folks who present, understand themselves, and!or relate to others in a more feminine way, but who don’t necessarily identify as women'
+        definition:'Indicates a range of terms of gender identity and gender presentation for folks who present, understand themselves, and!or relate to others in a more feminine way, but who don!t necessarily identify as women'
     },
     {
         phrase:'Gender binary',
@@ -120,7 +120,7 @@ export let paragraphs =
     },
     {
         phrase:'Pronouns',
-        definition:'The words used to refer to people’s gender, for example, ‘he’ or ‘she’, or the gender neutral ‘they’ or ‘zie’'
+        definition:'The words used to refer to people!s gender, for example, he or she, or the gender neutral they or zie'
     },
     {
         phrase:'Toxic masculinity',
