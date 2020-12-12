@@ -8,7 +8,7 @@ body{
     font-size: 2rem;
     font-family: sans-serif;
     background-color: plum;
-    color: #464646;
+    color: black;
 }
 header{
     margin-top: 20px;
@@ -19,6 +19,7 @@ header{
     grid-area: 2 / 2 / span 1 / span 1;
     height:100%;
     justify-self: center;
+    align-self: center;
 } 
 #resetGame{
     background-color: orange;
@@ -38,7 +39,6 @@ header{
     grid-area: 4 / 2 / span 1 / span 1;
     align-self: center;
     text-decoration: underline;
-    color: black;
 }
 #currentStats{
     display: none;
@@ -47,7 +47,7 @@ header{
 }    
 #typing{
     grid-area: 5 / 2 / span 1 / span 1;
-    color: black;
+    
 }
 .focus{
     background-color: orchid;
