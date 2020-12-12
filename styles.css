@@ -8,7 +8,7 @@ body{
     font-size: 2rem;
     font-family: sans-serif;
     background-color: plum;
-    color: black;
+    color: #464646;
 }
 header{
     margin-top: 20px;
@@ -53,7 +53,7 @@ header{
     background-color: orchid;
 }
 .done{
-    color:#464646;
+    color:black;
 }
 #credits{
     grid-area: 2 / 3 / span 1 / span 1;
