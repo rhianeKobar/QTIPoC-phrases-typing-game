@@ -12,7 +12,7 @@ body{
 }
 header{
     margin-top: 20px;
-    grid-area: 1 / 2 / span 1 / span 1;
+    grid-area: 1 / 1 / span 1 / span 3;
     justify-self: center;
 }
 #gameButtons{
