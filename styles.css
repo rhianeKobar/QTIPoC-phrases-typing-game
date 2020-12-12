@@ -8,7 +8,7 @@ body{
     font-size: 2rem;
     font-family: sans-serif;
     background-color: plum;
-    color: whitesmoke;
+    color: #464646;
 }
 header{
     margin-top: 20px;
@@ -25,6 +25,7 @@ header{
     background-color: orange;
     border-radius: 10px;
     min-width: 10rem;
+    font-size: 1.3rem;
     min-height: 4rem;
 }
 #gameStats{
@@ -50,5 +51,5 @@ header{
     background-color: orchid;
 }
 .done{
-    color: lightslategray;
+    color: #212121;
 }
