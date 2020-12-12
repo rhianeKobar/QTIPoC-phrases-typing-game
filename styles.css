@@ -4,7 +4,7 @@
 }
 body{
     display: grid;
-    grid-template:2fr 1fr 1fr 1fr 2fr 1fr/ 1fr 2fr 1fr;
+    grid-template:3fr 1fr 1fr 1fr 2fr / 1fr 2fr 1fr;
     font-size: 2rem;
     font-family: sans-serif;
     background-color: plum;
