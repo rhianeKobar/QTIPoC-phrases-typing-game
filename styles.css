@@ -37,7 +37,6 @@ header{
     grid-area: 4 / 2 / span 1 / span 1;
     align-self: center;
     text-decoration: underline;
-    color: mintcream;
 }
 #currentStats{
     display: none;
@@ -51,5 +50,5 @@ header{
     background-color: orchid;
 }
 .done{
-    color: #212121;
+    color: #000000;
 }
