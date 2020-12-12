@@ -75,6 +75,7 @@ let stats = document.getElementById('currentStats');
 let phraseCounter = 0;
 let counter = document.getElementById('counter');
 let speed = document.getElementById('speed');
+let gameStats = document.getElementById('gameStats');
 let speedTotal = 0;
 
 
@@ -124,6 +125,7 @@ function calcAvgSpeed(wpm) {
 function countPhrases() {
     phraseCounter++;
     counter.innerText = 'Phrases learned: ' + phraseCounter;
+    gameStats.style.display = 'block';
 }
 function removeElement(element, array) {
 
