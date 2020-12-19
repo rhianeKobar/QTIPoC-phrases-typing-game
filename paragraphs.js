@@ -104,7 +104,7 @@ export let paragraphs =
     },
     {
         phrase:'Institutional Racism',
-        definition:'A form of racism expressed which, covertly or overtly, resides in the policies, procedures, operations and culture of public or private institutions – reinforcing individual prejudices and being reinforced by them in turn. It is reflected in disparities regarding wealth, income, criminal justice, employment, housing, health care, political power and education, among other things'
+        definition:'A form of racism expressed which, covertly or overtly, resides in the policies, procedures, operations and culture of public or private institutions - reinforcing individual prejudices and being reinforced by them in turn. It is reflected in disparities regarding wealth, income, criminal justice, employment, housing, health care, political power and education, among other things'
     },
     {
         phrase:'Liberation',
