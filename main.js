@@ -119,7 +119,7 @@ function calcAvgSpeed(wpm) {
 let gameButtons = document.getElementById('gameButtons')
 function countPhrases() {
     phraseCounter++;
-    counter.innerText = 'Phrases learned: ' + phraseCounter;
+    counter.innerText = phraseCounter;
     gameStats.style.display = 'inline-flex';
     gameStats.style.justifySelf = 'end'
     gameButtons.style.justifySelf = 'start'
