@@ -11,34 +11,52 @@
     <header>
         Hi there :) 
         <br/>
-        This is a game that tests your typing speed while teaching you the definitions of words and phrases used in the QTIPoC community. 
+        This is a game that tests your typing speed while teaching you the definitions of words and phrases used to define people, circumstances and occurences members of the QTIPoC community face, most in their day to day lives. 
         <br />
-        <strong>To begin</strong>, scroll down until you see a single word/phrase followed and start typing the definition below. 
+       <!--credits section-->
+        
+    </header>
+    <div id="credits">
+            <div class="cred">
+                <strong>Glossary from:</strong>
+                <br />
+                <a href="https://purpleraincollective.com/">Purple Rain Collective</a>
+            </div>
+            <div class="cred">
+                <strong>Developed by:</strong>
+                <br />
+                <a href="https://github.com/rhianeKobar">rhianeKobar</a>
+            </div>
+    </div>
+    <!--buttons-->
+    <div id="gameButtons">
+        <button id="instructionsBtn">Instructions</button>
+        <button id="resetGame">Reset</button>
+    </div>
+    
+    <!--instructions-->
+    <aside id="instructions">
+        <strong>To begin</strong>, scroll down until you see a single word/phrase followed by a sentence or paragraph and type what you see! 
         <br />
         Remember to use uppercase(capital) letters whenever they appear.
         <br />
-        <strong>NOTE:</strong> This does not work on Safari or touch screen devices. All forward slashes(/), quotation marks(") and apostrophes(')have been replaced by an exclaimation mark (!).
-    </header>
-    <div id="gameButtons">
-        <button id="resetGame">Reset</button>
-    </div>
+        <strong>NOTE:</strong> This does not work on Safari or touch screen devices. All forward slashes(/), quotation marks(") and apostrophes(')have been replaced by an exclaimation mark (!).    
+        <button style='display: block' id="closeBtn">close</button>
+    </aside>
+
+    <!--player statistics-->
     <div id="gameStats">
         <div id = "counter"></div>
         <div id = "speed"></div>
         <div id = "tSpeed"></div>
     </div>
+
+    <!--phrase you're learning the meaning of-->
     <div id="currentPhrase"></div>
-    <div id="currentStats"></div>
+    
+    <!-- div where game appears -->
     <div id="typing"></div>
-    <div id="credits">
-        <strong>Glossary from:</strong>
-        <br />
-        <a href="https://purpleraincollective.com/">Purple Rain Collective</a>
-        <br />
-        <strong>Developed by:</strong>
-        <br />
-        <a href="https://github.com/rhianeKobar">rhianeKobar</a>
-    </div>
+    
     <script src="main.js" type="module"></script>
 </body>
 </html>

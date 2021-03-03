@@ -68,8 +68,7 @@ nextPhrase();
 let startTime = null;
 let endTime = null;
 let speedArray = [];
-let wpm;
-let stats = document.getElementById('currentStats');
+let wpm
 
 //game stats variables
 let phraseCounter = 0;
@@ -103,12 +102,7 @@ function wordsPM(totalTime){
     wpm = Math.floor(cpm/5);
     return wpm;
 }
-//displaying wpm
-/*function displayStats(wpm){
-    stats.innerText = 'Typing Speed: ' + wpm + ' words per minute ';
-    typingText.style.display = 'none';
-    stats.style.display = 'inherit';
-}*/
+
 //calculate and display average wpm
 function calcAvgSpeed(wpm) {
     speedArray.push(wpm);
@@ -126,10 +120,13 @@ function calcAvgSpeed(wpm) {
     }
 }
 //increment and display phrase counter
+let gameButtons = document.getElementById('gameButtons')
 function countPhrases() {
     phraseCounter++;
     counter.innerText = 'Phrases learned: ' + phraseCounter;
-    gameStats.style.display = 'block';
+    gameStats.style.display = 'inline';
+    gameStats.style.justifySelf = 'end'
+    gameButtons.style.justifySelf = 'start'
 }
 function removeElement(element, array) {
 
@@ -161,9 +158,6 @@ function game({ key }) {
             //calculate the words per minute
             let wpm = wordsPM(minutes);
 
-            //display wpm
-            //displayStats(wpm);
-
             //increment phrase counter and display
             countPhrases();
 
@@ -187,12 +181,24 @@ function game({ key }) {
     }
 }
 let resetBtn = document.getElementById('resetGame')
+let instructionsBtn = document.getElementById('instructionsBtn')
+let instructions = document.getElementById('instructions')
+let closebtn = document.getElementById('closeBtn')
+
 function resetGame(){
     window.location.reload();
+}
+function showInstructions(){
+    instructions.style.display = 'block';
+}
+function closeWindow(){
+    instructions.style.display = 'none'
 }
 
 //event Listeners
 resetBtn.addEventListener('click',resetGame)
+instructionsBtn.addEventListener('click',showInstructions)
+closebtn.addEventListener('click', closeWindow)
 document.addEventListener('keydown',game);
 
     

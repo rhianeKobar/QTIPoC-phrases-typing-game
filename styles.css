@@ -4,23 +4,32 @@
 }
 body{
     display: grid;
-    grid-template:3fr 1fr 1fr 1fr 2fr / 1fr 2fr 1fr;
+    grid-template: 3fr 1fr 3fr / 1fr 3fr 1fr;
     font-size: 2rem;
     font-family: sans-serif;
     background-color: plum;
     color: #464646;
+    justify-content: center;
+    align-items: center;
 }
 header{
-    margin-top: 20px;
-    grid-area: 1 / 1 / span 1 / span 3;
-    justify-self: center;
-    text-align: center;
+    margin-top: 10px;
+    align-self: start;
+    grid-area: 1 / 2 / span 1 / span 1;
+}
+#credits{
+    grid-area: 1 / 2 / span 1 / span 1;
+    align-self: end;
+}
+.cred{
+    display: inline-block
 }
 #gameButtons{
     grid-area: 2 / 2 / span 1 / span 1;
-    height:100%;
+    margin:30px;
+    justify-self: center;
 } 
-#resetGame{
+button{
     background-color: orange;
     border-radius: 10px;
     border-color: #464646;
@@ -31,25 +40,18 @@ header{
     top: 50%;
 }
 #gameStats{
-    grid-area: 3 / 1 / span 1 / span 3;
-    justify-self: center;
-    align-self: center;
+    grid-area: 2 / 2 / span 1 / span 1;
     display: none;
-    text-align: center;
+    text-align: end;
 }
 #currentPhrase{
-    grid-area: 4 / 2 / span 1 / span 1;
-    align-self: center;
+    grid-area: 3 / 2 / span 1 / span 1;
+    align-self: start;
     text-decoration: underline;
-}
-#currentStats{
-    display: none;
-    grid-area: 5 / 2 / span 1 / span 1;
-    justify-self: center;
-}    
+}   
 #typing{
-    grid-area: 5 / 2 / span 1 / span 1;
-    text-align: center;
+    grid-area: 3 / 2 / span 1 / span 1;
+    align-self: center;
     
 }
 .focus{
@@ -58,8 +60,13 @@ header{
 .done{
     color:black;
 }
-#credits{
-    grid-area: 2 / 3 / span 1 / span 1;
-    justify-self: start;
-    font-size: 1.5rem;
+
+#instructions{
+    position: absolute;
+    margin: 0 auto;
+    grid-column: 2 / span 1;
+    display: none;
+    border: 1px solid black;
+    background-color: aqua;
+    color: black;
 }
