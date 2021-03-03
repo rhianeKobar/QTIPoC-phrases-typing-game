@@ -106,25 +106,21 @@ function wordsPM(totalTime){
 //calculate and display average wpm
 function calcAvgSpeed(wpm) {
     speedArray.push(wpm);
-    if (speedArray.length > 1) {
         let speedTotal  = speedArray.reduce((a, b)=>{
             return a + b;
         })
         let avgSpeed = Math.floor(speedTotal/(speedArray.length));
-        speed.innerText = 'Your Average typing speed: ' + avgSpeed + ' words per minute',
-        tSpeed.innerText = 'Your typing speed: ' + speedArray[(speedArray.length -1)] + ' words per minute'
+        speed.innerText = avgSpeed; 
+        tSpeed.innerText = speedArray[(speedArray.length -1)]
         return avgSpeed;
 
-    }else{
-        return tSpeed.innerText = 'Your typing speed: ' + speedArray[(speedArray.length -1)] + ' words per minute';
-    }
 }
 //increment and display phrase counter
 let gameButtons = document.getElementById('gameButtons')
 function countPhrases() {
     phraseCounter++;
     counter.innerText = 'Phrases learned: ' + phraseCounter;
-    gameStats.style.display = 'inline';
+    gameStats.style.display = 'inline-flex';
     gameStats.style.justifySelf = 'end'
     gameButtons.style.justifySelf = 'start'
 }
@@ -183,7 +179,10 @@ function game({ key }) {
 let resetBtn = document.getElementById('resetGame')
 let instructionsBtn = document.getElementById('instructionsBtn')
 let instructions = document.getElementById('instructions')
-let closebtn = document.getElementById('closeBtn')
+let instClosebtn = document.getElementById('instCloseBtn')
+let creditsBtn = document.getElementById('creditsBtn')
+let credits = document.getElementById('credits')
+let credClosebtn = document.getElementById('credCloseBtn')
 
 function resetGame(){
     window.location.reload();
@@ -191,14 +190,22 @@ function resetGame(){
 function showInstructions(){
     instructions.style.display = 'block';
 }
-function closeWindow(){
+function closeInstructions(){
     instructions.style.display = 'none'
+}
+function showCredits(){
+    credits.style.display = 'block';
+}
+function closeCredits(){
+    credits.style.display = 'none'
 }
 
 //event Listeners
 resetBtn.addEventListener('click',resetGame)
 instructionsBtn.addEventListener('click',showInstructions)
-closebtn.addEventListener('click', closeWindow)
+instClosebtn.addEventListener('click', closeInstructions)
+creditsBtn.addEventListener('click',showCredits)
+credClosebtn.addEventListener('click', closeCredits)
 document.addEventListener('keydown',game);
 
     

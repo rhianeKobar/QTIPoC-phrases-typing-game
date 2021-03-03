@@ -4,10 +4,10 @@
 }
 body{
     display: grid;
-    grid-template: 3fr 1fr 3fr / 1fr 3fr 1fr;
+    grid-template: 1fr 1fr 3fr / 1fr 3fr 1fr;
     font-size: 2rem;
     font-family: sans-serif;
-    background-color: plum;
+    background-color: #dda0dd;
     color: #464646;
     justify-content: center;
     align-items: center;
@@ -17,27 +17,47 @@ header{
     align-self: start;
     grid-area: 1 / 2 / span 1 / span 1;
 }
-#credits{
-    grid-area: 1 / 2 / span 1 / span 1;
-    align-self: end;
-}
 .cred{
     display: inline-block
 }
 #gameButtons{
     grid-area: 2 / 2 / span 1 / span 1;
     margin:30px;
+    font-size: 1.5rem;
     justify-self: center;
 } 
 button{
-    background-color: orange;
-    border-radius: 10px;
+    background-color: black;
+    border-radius: 5px;
+    color: aliceblue;
+    display: inline-block;
     border-color: #464646;
     min-width: 10rem;
     font-size: 1.5rem;
     min-height: 4rem;
     position: relative;
     top: 50%;
+}
+.card{
+    height:100%;
+    width: 30%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 1.5rem;
+}
+.cardHeader{
+    height: 25%;
+    width: 100%;
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+}
+.cardContent{
+    height:75%;
+    width:100%;
+    background-color: aliceblue;
+    color: black;
+    text-align: center;
 }
 #gameStats{
     grid-area: 2 / 2 / span 1 / span 1;
@@ -47,6 +67,7 @@ button{
 #currentPhrase{
     grid-area: 3 / 2 / span 1 / span 1;
     align-self: start;
+    margin-top: 5%;
     text-decoration: underline;
 }   
 #typing{
@@ -61,12 +82,18 @@ button{
     color:black;
 }
 
-#instructions{
+#instructions, #credits{
     position: absolute;
-    margin: 0 auto;
-    grid-column: 2 / span 1;
+    margin-left:20%;
+    margin-right:20%;
+    width: 60%;
+    font-size:1.2rem;
+    text-align: center;
     display: none;
-    border: 1px solid black;
-    background-color: aqua;
-    color: black;
+    border: 1px solid #464646;
+    background-color: black;
+    color: aliceblue;
+}
+#instructions button, #credits button{
+    background-color: plum;
 }

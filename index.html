@@ -9,46 +9,56 @@
 </head>
 <body>
     <header>
-        Hi there :) 
+        <!--buttons-->
+        <div id="gameButtons">
+            <button id="instructionsBtn">Instructions</button>
+            <button id="resetGame">Reset</button>
+            <button id="creditsBtn">Credits</button>
+        </div>
+    </header>
+    <!--instructions-->
+    <aside id="instructions">
+        <h3>Hi there :) </h3>
         <br/>
         This is a game that tests your typing speed while teaching you the definitions of words and phrases used to define people, circumstances and occurences members of the QTIPoC community face, most in their day to day lives. 
         <br />
-       <!--credits section-->
-        
-    </header>
-    <div id="credits">
-            <div class="cred">
-                <strong>Glossary from:</strong>
-                <br />
-                <a href="https://purpleraincollective.com/">Purple Rain Collective</a>
-            </div>
-            <div class="cred">
-                <strong>Developed by:</strong>
-                <br />
-                <a href="https://github.com/rhianeKobar">rhianeKobar</a>
-            </div>
-    </div>
-    <!--buttons-->
-    <div id="gameButtons">
-        <button id="instructionsBtn">Instructions</button>
-        <button id="resetGame">Reset</button>
-    </div>
-    
-    <!--instructions-->
-    <aside id="instructions">
         <strong>To begin</strong>, scroll down until you see a single word/phrase followed by a sentence or paragraph and type what you see! 
         <br />
         Remember to use uppercase(capital) letters whenever they appear.
         <br />
         <strong>NOTE:</strong> This does not work on Safari or touch screen devices. All forward slashes(/), quotation marks(") and apostrophes(')have been replaced by an exclaimation mark (!).    
-        <button style='display: block' id="closeBtn">close</button>
+        <button style='display: block' id="instCloseBtn">close</button>
     </aside>
-
+    <!--credits-->   
+    <aside id="credits">
+        <div class="cred">
+            <strong>Glossary from:</strong>
+            <br />
+            <a href="https://purpleraincollective.com/">Purple Rain Collective</a>
+        </div>
+        <div class="cred">
+            <strong>Developed by:</strong>
+            <br />
+            <a href="https://github.com/rhianeKobar">rhianeKobar</a>
+        </div>
+        <button style='display: block' id="credCloseBtn">close</button>
+    </aside>
     <!--player statistics-->
     <div id="gameStats">
-        <div id = "counter"></div>
-        <div id = "speed"></div>
-        <div id = "tSpeed"></div>
+        <div class="card">
+            <div class="cardHeader">Phrases Learned</div>
+            <div id ="counter" class="cardContent"></div>
+        </div>
+        <br/>
+        <div class="card">
+            <div class="cardHeader">Average Typing speed</div>
+            <div id ="speed" class="cardContent"></div>
+        </div>
+        <br/>
+        <div class="card">
+            <div class="cardHeader">Previous Typing speed</div>
+            <div id ="tSpeed" class="cardContent"></div>
+        </div>
     </div>
 
     <!--phrase you're learning the meaning of-->
