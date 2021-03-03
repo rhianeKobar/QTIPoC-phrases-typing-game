@@ -189,15 +189,17 @@ function resetGame(){
 }
 function showInstructions(){
     instructions.style.display = 'block';
+    credits.style.display = 'none';
 }
 function closeInstructions(){
-    instructions.style.display = 'none'
+    instructions.style.display = 'none';
 }
 function showCredits(){
     credits.style.display = 'block';
+    instructions.style.display = 'none';
 }
 function closeCredits(){
-    credits.style.display = 'none'
+    credits.style.display = 'none';
 }
 
 //event Listeners

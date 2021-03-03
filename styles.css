@@ -18,7 +18,8 @@ header{
     grid-area: 1 / 2 / span 1 / span 1;
 }
 .cred{
-    display: inline-block
+    display: inline-block;
+    width:30%;
 }
 #gameButtons{
     grid-area: 2 / 2 / span 1 / span 1;
