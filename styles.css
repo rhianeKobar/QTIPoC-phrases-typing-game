@@ -68,7 +68,7 @@ button{
 #currentPhrase{
     grid-area: 3 / 2 / span 1 / span 1;
     align-self: start;
-    margin-top: 5%;
+    margin: 5%;
     text-decoration: underline;
 }   
 #typing{
