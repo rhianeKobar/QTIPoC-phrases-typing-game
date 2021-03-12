@@ -90,7 +90,7 @@ button{
     width: 80%;
     font-size:1.2rem;
     text-align: center;
-    display: inline-block;
+    display: none;
     border: 1px solid #464646;
     background-color: black;
     color: aliceblue;
