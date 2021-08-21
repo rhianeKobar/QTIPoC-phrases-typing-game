@@ -8,7 +8,7 @@ body{
     font-size: 2rem;
     font-family: sans-serif;
     background-color: #dda0dd;
-    color: #464646;
+    color:floralwhite;
     justify-content: center;
     align-items: center;
 }
@@ -32,7 +32,7 @@ button{
     border-radius: 5px;
     color: aliceblue;
     display: inline-block;
-    border-color:whitesmoke;
+    border-color: #464646;
     min-width: 10rem;
     font-size: 1.5rem;
     min-height: 3.5rem;
