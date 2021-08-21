@@ -13,19 +13,33 @@ body{
     align-items: center;
 }
 header{
-    margin-top: 10px;
-    align-self: start;
+    margin: 0;
     grid-area: 1 / 2 / span 1 / span 1;
+    justify-self: stretch;
+    align-self: center;
+    padding: 0;
+}
+aside{
+    position: absolute;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-size: 1.2rem;
+    text-align: center;
+    border: 1px solid #464646;
+    background-color: black;
+    color: aliceblue;
 }
 .cred{
     display: inline-block;
     width:30%;
 }
 #gameButtons{
-    grid-area: 2 / 2 / span 1 / span 1;
-    margin:30px;
     font-size: 1.5rem;
-    justify-self: center;
+    margin: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    align-items: center;
+    justify-content: center;
 } 
 button{
     background-color: black;
@@ -37,7 +51,6 @@ button{
     font-size: 1.5rem;
     min-height: 3.5rem;
     position: relative;
-    top: 50%;
 }
 .card{
     height:100%;
@@ -45,6 +58,8 @@ button{
     margin-left: 5%;
     margin-right: 5%;
     font-size: 1.5rem;
+		border-radius: 5px;
+    border-color: #464646;
 }
 .cardHeader{
     height: 25%;
@@ -82,19 +97,6 @@ button{
 }
 .done{
     color:black;
-}
-
-#instructions, #credits{
-    position: absolute;
-    margin-left:20%;
-    margin-right:20%;
-    width: 80%;
-    font-size:1.2rem;
-    text-align: center;
-    display: none;
-    border: 1px solid #464646;
-    background-color: black;
-    color: aliceblue;
 }
 #instructions button, #credits button{
     background-color: plum;
