@@ -1,65 +1,66 @@
 *{
     margin:0 auto;
     padding:0;
+    box-sizing: border-box;
 }
 body{
     display: grid;
-    grid-template: 1fr 1fr 4fr / 1fr 3fr 1fr;
+    grid-template-columns: repeat(12, 1fr);
     font-size: 2rem;
     font-family: sans-serif;
     background-color: #dda0dd;
     color:floralwhite;
     justify-content: center;
     align-items: center;
-}
-header{
-    margin: 0;
-    grid-area: 1 / 2 / span 1 / span 1;
-    justify-self: stretch;
-    align-self: center;
-    padding: 0;
+    position: relative;
+    height: 100vh;
+    overflow: auto;
 }
 aside{
     position: absolute;
-    margin-left: 20%;
-    margin-right: 20%;
     font-size: 1.2rem;
     text-align: center;
-    border: 1px solid #464646;
+    border: 5px solid #464646;
+    border-radius: 5%;
     background-color: black;
     color: aliceblue;
+    display: none;
+    left: 50%;
+    padding: 1%;
+    transform: translate(-50%, 0%)
 }
 .cred{
     display: inline-block;
-    width:30%;
+    padding: 2%;
 }
 #gameButtons{
     font-size: 1.5rem;
-    margin: 30px;
-    grid-template-columns: repeat(3, 1fr);
-    display: grid;
-    align-items: center;
-    justify-content: center;
+    margin: 0 auto;
+    grid-column: 1 /span 2;
+    padding: 1;
 } 
 button{
     background-color: black;
     border-radius: 5px;
     color: aliceblue;
-    display: inline-block;
+    display: block;
     border-color: #464646;
     min-width: 10rem;
     font-size: 1.5rem;
     min-height: 3.5rem;
-    position: relative;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+#instructionsBtn, #resetGame, #creditsBtn{
+    margin-bottom: 30%;
 }
 .card{
     height:100%;
-    width: 30%;
     margin-left: 5%;
     margin-right: 5%;
     font-size: 1.5rem;
-		border-radius: 5px;
-    border-color: #464646;
+	border-radius: 5px;
+    border: 3px solid #464646;
 }
 .cardHeader{
     height: 25%;
@@ -76,22 +77,21 @@ button{
     text-align: center;
 }
 #gameStats{
-    grid-area: 2 / 2 / span 1 / span 1;
+    grid-column: 11 / span 2;
     display: none;
     text-align: end;
+    padding: 1%;
+}
+#game{
+    grid-column: 3 / span 8;
+    padding: 2%;
+    align-self: start;
 }
 #currentPhrase{
-    grid-area: 3 / 2 / span 1 / span 1;
-    align-self: start;
     margin: 5%;
     text-decoration: underline;
-		color: black;
+	color: black;
 }   
-#typing{
-    grid-area: 3 / 2 / span 1 / span 1;
-    align-self: center;
-    
-}
 .focus{
     background-color: orchid;
 }
@@ -100,4 +100,5 @@ button{
 }
 #instructions button, #credits button{
     background-color: plum;
+    margin: auto;
 }

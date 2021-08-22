@@ -120,7 +120,7 @@ let gameButtons = document.getElementById('gameButtons')
 function countPhrases() {
     phraseCounter++;
     counter.innerText = phraseCounter;
-    gameStats.style.display = 'inline-flex';
+    gameStats.style.display = 'block';
     gameStats.style.justifySelf = 'end'
     gameButtons.style.justifySelf = 'start'
 }

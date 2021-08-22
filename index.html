@@ -8,14 +8,12 @@
     <link href="styles.css" rel="stylesheet" type="text/css"> 
 </head>
 <body>
-    <header>
-        <!--buttons-->
-        <div id="gameButtons">
-            <button id="instructionsBtn">Instructions</button>
-            <button id="resetGame">Reset</button>
-            <button id="creditsBtn">Credits</button>
-        </div>
-    </header>
+		<!--buttons-->
+		<div id="gameButtons">
+			<button id="instructionsBtn">Instructions</button>
+			<button id="resetGame">Reset</button>
+			<button id="creditsBtn">Credits</button>
+		</div>
     <!--instructions-->
     <aside id="instructions">
         <h3>Hi there :) </h3>
@@ -47,6 +45,15 @@
         <br/>
         <button style='display: block' id="credCloseBtn">close</button>
     </aside>
+		<!--Display game-->
+		<div id="game">
+			<!--phrase you're learning the meaning of-->
+			<div id="currentPhrase"></div>
+			
+			<!-- div where game appears -->
+			<div id="typing"></div>
+		</div>
+    
     <!--player statistics-->
     <div id="gameStats">
         <div class="card">
@@ -64,13 +71,6 @@
             <div id ="tSpeed" class="cardContent"></div>
         </div>
     </div>
-
-    <!--phrase you're learning the meaning of-->
-    <div id="currentPhrase"></div>
-    
-    <!-- div where game appears -->
-    <div id="typing"></div>
-    
-    <script src="main.js" type="module"></script>
+		<script src="main.js" type="module"></script>
 </body>
 </html>
