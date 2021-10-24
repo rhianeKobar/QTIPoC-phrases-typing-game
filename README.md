@@ -16,4 +16,10 @@ I am a black, queer person and my communities are marginalised and underrepresen
 
 ## Design
 
+This is my original design, I really liked the layout of this as well as how the statistics would be displayed.
+![Original design](Resources/highFidelityWireframe.png) 
 
+<br>
+This is my updated design, this iteration is mmuch more responsive than the last and I've found that people don't get lost on their way to playing the game like they did with the last design ha! 
+
+![Original design](Resources/highFidelityWireframe2.png) 
